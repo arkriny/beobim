@@ -1809,12 +1809,6 @@ M.cmds = {
     func = 'ex_map',
   },
   {
-    command = 'options',
-    flags = bit.bor(TRLBAR),
-    addr_type = 'ADDR_NONE',
-    func = 'ex_options',
-  },
-  {
     command = 'ounmap',
     flags = bit.bor(EXTRA, TRLBAR, NOTRLCOM, CTRLV, CMDWIN, LOCK_OK),
     addr_type = 'ADDR_NONE',

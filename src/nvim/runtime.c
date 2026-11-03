@@ -1957,19 +1957,6 @@ void ex_source(exarg_T *eap)
   cmd_source(eap->arg, eap);
 }
 
-/// ":options"
-void ex_options(exarg_T *eap)
-{
-  char buf[500];
-  bool multi_mods = 0;
-
-  buf[0] = NUL;
-  add_win_cmd_modifiers(buf, &cmdmod, &multi_mods);
-
-  os_setenv("OPTWIN_CMD", buf, 1);
-  cmd_source(SYS_OPTWIN_FILE, NULL);
-}
-
 /// ":source" and associated commands.
 ///
 /// @return address holding the next breakpoint line for a source cookie
